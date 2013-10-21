@@ -1,4 +1,4 @@
-coder.interviewer
-=================
+# Gutter - Guts getter 蛋者面试机#
+*aka the coder.interviewer project*
 
-Nice and fullstack interview guide for web developers.
+Nice and interview helper for full-stack web developers.
