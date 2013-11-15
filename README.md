@@ -1,6 +1,23 @@
-# Gutter - Guts getter 蛋者面试机#
+# Gutter - Get A Better Job #
 *aka the coder.interviewer project*
 
+About
+-----
+Gutter is a interview helper for full-stack web developers.
+
+Thoughts
+--------
 Stop Careering. Start Contributing
------------------------------------
-Nice and interview helper for full-stack web developers.
+
+Features
+--------
+
+
+
+Guide
+-----
+
+
+Donation
+--------
+
