@@ -1,4 +1,1 @@
-coder.interviewer
-=================
-
-Nice and fullstack interview guide for web developers.
+# About Gutter for iOS #

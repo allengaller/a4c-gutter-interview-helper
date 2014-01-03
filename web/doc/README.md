@@ -1,4 +1,11 @@
-coder.interviewer
-=================
+# Mazi Documents #
 
-Nice and fullstack interview guide for web developers.
+About Mazi Documents
+--------------------
+
+* Database Design
+* Detail Design Document 
+* Requirement Document : PRD, MRD, BRD. 
+* SEO 搜索引擎优化
+* UAT
+* UED

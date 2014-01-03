@@ -1,0 +1,6 @@
+# Mazi Database Design #
+
+About
+-----
+
+

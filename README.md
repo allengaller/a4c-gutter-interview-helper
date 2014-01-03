@@ -4,7 +4,8 @@
 About
 -----
 Gutter is a interview helper for full-stack web developers.   
-蛋蛋是一个程序员面试题分享解答的站点。   
+金刚钻是一个程序员面试题分享解答的站点。   
+中文名来自中国谚语:"没有金刚钻就别揽这个瓷器活", 此项目就是希望给予码农各种金刚钻，让大家都能揽到瓷器活。
 
 Thoughts
 --------
