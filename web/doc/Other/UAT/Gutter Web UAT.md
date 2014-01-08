@@ -1,2 +1,2 @@
-# Mazi UAT #
+# Gutter UAT #
 * User Acceptance Testing *

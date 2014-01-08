@@ -1,1 +1,0 @@
-# Mazi System Detail Design #
