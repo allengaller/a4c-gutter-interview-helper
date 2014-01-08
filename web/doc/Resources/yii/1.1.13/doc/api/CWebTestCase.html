@@ -1,0 +1,1674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="language" content="en" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/api.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<title>CWebTestCase</title>
+</head>
+
+<body>
+<div id="apiPage">
+
+<div id="apiHeader">
+<a href="http://www.yiiframework.com">Yii Framework</a> v1.1.13 Class Reference
+</div><!-- end of header -->
+
+<div id="content">
+<h1>CWebTestCase</h1>
+<div id="nav">
+<a href="index.html">All Packages</a>
+| <a href="#properties">Properties</a>
+| <a href="#methods">Methods</a>
+</div>
+
+<table class="summaryTable docClass">
+<colgroup>
+	<col class="col-name" />
+	<col class="col-value" />
+</colgroup>
+<tr>
+  <th>Package</th>
+  <td><a href="index.html#system.test">system.test</a></td>
+</tr>
+<tr>
+  <th>Inheritance</th>
+  <td>abstract class CWebTestCase &raquo;
+PHPUnit_Extensions_SeleniumTestCase &raquo;
+PHPUnit_Framework_TestCase &raquo;
+PHPUnit_Framework_Assert</td>
+</tr>
+<tr>
+  <th>Implements</th>
+  <td>PHPUnit_Framework_Test, Countable, PHPUnit_Framework_SelfDescribing</td>
+</tr>
+<tr>
+  <th>Since</th>
+  <td>1.1</td>
+</tr>
+<tr>
+  <th>Source Code</th>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/1.1.13/framework/test/CWebTestCase.php">framework/test/CWebTestCase.php</a></td>
+</tr>
+</table>
+
+<div id="classDescription">
+CWebTestCase is the base class for Web-based functional test case classes.
+<br/><br/>
+It extends PHPUnit_Extensions_SeleniumTestCase and provides the database
+fixture management feature like <a href="CDbTestCase.html">CDbTestCase</a>.</div>
+<a name="properties"></a>
+
+<div class="summary docProperty">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summaryTable">
+<colgroup>
+	<col class="col-property" />
+	<col class="col-type" />
+	<col class="col-description" />
+	<col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+<tr class="inherited" id="browsers">
+  <td>browsers</td>
+  <td>array</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+</table>
+</div>
+<div class="summary docProperty">
+<h2>Protected Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summaryTable">
+<colgroup>
+	<col class="col-property" />
+	<col class="col-type" />
+	<col class="col-description" />
+	<col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+<tr class="inherited" id="backupGlobals">
+  <td>backupGlobals</td>
+  <td>boolean</td>
+  <td>Enable or disable the backup and restoration of the $GLOBALS array.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="backupGlobalsBlacklist">
+  <td>backupGlobalsBlacklist</td>
+  <td>array</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="backupStaticAttributes">
+  <td>backupStaticAttributes</td>
+  <td>boolean</td>
+  <td>Enable or disable the backup and restoration of static attributes.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="backupStaticAttributesBlacklist">
+  <td>backupStaticAttributesBlacklist</td>
+  <td>array</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="browserName">
+  <td>browserName</td>
+  <td>string</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="captureScreenshotOnFailure">
+  <td>captureScreenshotOnFailure</td>
+  <td>boolean</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="collectCodeCoverageInformation">
+  <td>collectCodeCoverageInformation</td>
+  <td>boolean</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="coverageScriptUrl">
+  <td>coverageScriptUrl</td>
+  <td>string</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="drivers">
+  <td>drivers</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase_Driver[]</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr id="fixtures">
+  <td><a href="CWebTestCase.html#fixtures-detail">fixtures</a></td>
+  <td>array</td>
+  <td>a list of fixtures that should be loaded before each test method executes.</td>
+  <td>CWebTestCase</td>
+</tr>
+<tr class="inherited" id="inDefaultAssertions">
+  <td>inDefaultAssertions</td>
+  <td>boolean</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="preserveGlobalState">
+  <td>preserveGlobalState</td>
+  <td>boolean</td>
+  <td>Whether or not this test should preserve the global state when</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="runTestInSeparateProcess">
+  <td>runTestInSeparateProcess</td>
+  <td>boolean</td>
+  <td>Whether or not this test is to be run in a separate PHP process.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="screenshotPath">
+  <td>screenshotPath</td>
+  <td>string</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="screenshotUrl">
+  <td>screenshotUrl</td>
+  <td>string</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="serverConnectionTimeOut">
+  <td>serverConnectionTimeOut</td>
+  <td>integer</td>
+  <td>the number of seconds to wait before declaring
+                 the Selenium server not reachable</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="testId">
+  <td>testId</td>
+  <td>string</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="verificationErrors">
+  <td>verificationErrors</td>
+  <td>array</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+</table>
+</div>
+<a name="methods"></a>
+
+<div class="summary docMethod">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summaryTable">
+<colgroup>
+	<col class="col-method" />
+	<col class="col-description" />
+	<col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+<tr id="__call">
+  <td><a href="CWebTestCase.html#__call-detail">__call()</a></td>
+  <td>PHP magic method.</td>
+  <td>CWebTestCase</td>
+</tr>
+<tr class="inherited" id="__construct">
+  <td>__construct()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="__destruct">
+  <td>__destruct()</td>
+  <td>Stops any shared session still open at the end of the current</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr id="__get">
+  <td><a href="CWebTestCase.html#__get-detail">__get()</a></td>
+  <td>PHP magic method.</td>
+  <td>CWebTestCase</td>
+</tr>
+<tr class="inherited" id="addToAssertionCount">
+  <td>addToAssertionCount()</td>
+  <td>Adds a value to the assertion counter.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="any">
+  <td>any()</td>
+  <td>Returns a matcher that matches when the method it is evaluated for</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="anything">
+  <td>anything()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsAnything matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="arrayHasKey">
+  <td>arrayHasKey()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_ArrayHasKey matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertArrayHasKey">
+  <td>assertArrayHasKey()</td>
+  <td>Asserts that an array has a specified key.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertArrayNotHasKey">
+  <td>assertArrayNotHasKey()</td>
+  <td>Asserts that an array does not have a specified key.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeContains">
+  <td>assertAttributeContains()</td>
+  <td>Asserts that a haystack that is stored in a static attribute of a class</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeContainsOnly">
+  <td>assertAttributeContainsOnly()</td>
+  <td>Asserts that a haystack that is stored in a static attribute of a class</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeCount">
+  <td>assertAttributeCount()</td>
+  <td>Asserts the number of elements of an array, Countable or Iterator</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeEmpty">
+  <td>assertAttributeEmpty()</td>
+  <td>Asserts that a static attribute of a class or an attribute of an object</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeEquals">
+  <td>assertAttributeEquals()</td>
+  <td>Asserts that a variable is equal to an attribute of an object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeGreaterThan">
+  <td>assertAttributeGreaterThan()</td>
+  <td>Asserts that an attribute is greater than another value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeGreaterThanOrEqual">
+  <td>assertAttributeGreaterThanOrEqual()</td>
+  <td>Asserts that an attribute is greater than or equal to another value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeInstanceOf">
+  <td>assertAttributeInstanceOf()</td>
+  <td>Asserts that an attribute is of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeInternalType">
+  <td>assertAttributeInternalType()</td>
+  <td>Asserts that an attribute is of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeLessThan">
+  <td>assertAttributeLessThan()</td>
+  <td>Asserts that an attribute is smaller than another value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeLessThanOrEqual">
+  <td>assertAttributeLessThanOrEqual()</td>
+  <td>Asserts that an attribute is smaller than or equal to another value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeNotContains">
+  <td>assertAttributeNotContains()</td>
+  <td>Asserts that a haystack that is stored in a static attribute of a class</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeNotContainsOnly">
+  <td>assertAttributeNotContainsOnly()</td>
+  <td>Asserts that a haystack that is stored in a static attribute of a class</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeNotCount">
+  <td>assertAttributeNotCount()</td>
+  <td>Asserts the number of elements of an array, Countable or Iterator</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeNotEmpty">
+  <td>assertAttributeNotEmpty()</td>
+  <td>Asserts that a static attribute of a class or an attribute of an object</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeNotEquals">
+  <td>assertAttributeNotEquals()</td>
+  <td>Asserts that a variable is not equal to an attribute of an object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeNotInstanceOf">
+  <td>assertAttributeNotInstanceOf()</td>
+  <td>Asserts that an attribute is of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeNotInternalType">
+  <td>assertAttributeNotInternalType()</td>
+  <td>Asserts that an attribute is of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeNotSame">
+  <td>assertAttributeNotSame()</td>
+  <td>Asserts that a variable and an attribute of an object do not have the</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertAttributeSame">
+  <td>assertAttributeSame()</td>
+  <td>Asserts that a variable and an attribute of an object have the same type</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertClassHasAttribute">
+  <td>assertClassHasAttribute()</td>
+  <td>Asserts that a class has a specified attribute.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertClassHasStaticAttribute">
+  <td>assertClassHasStaticAttribute()</td>
+  <td>Asserts that a class has a specified static attribute.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertClassNotHasAttribute">
+  <td>assertClassNotHasAttribute()</td>
+  <td>Asserts that a class does not have a specified attribute.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertClassNotHasStaticAttribute">
+  <td>assertClassNotHasStaticAttribute()</td>
+  <td>Asserts that a class does not have a specified static attribute.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertContains">
+  <td>assertContains()</td>
+  <td>Asserts that a haystack contains a needle.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertContainsOnly">
+  <td>assertContainsOnly()</td>
+  <td>Asserts that a haystack contains only values of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertContainsOnlyInstancesOf">
+  <td>assertContainsOnlyInstancesOf()</td>
+  <td>Asserts that a haystack contains only instances of a given classname</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertCount">
+  <td>assertCount()</td>
+  <td>Asserts the number of elements of an array, Countable or Iterator.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertElementContainsText">
+  <td>assertElementContainsText()</td>
+  <td>Asserts that an element contains a given string.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertElementNotContainsText">
+  <td>assertElementNotContainsText()</td>
+  <td>Asserts that an element does not contain a given string.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertElementValueContains">
+  <td>assertElementValueContains()</td>
+  <td>Asserts that an element's value contains a given string.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertElementValueEquals">
+  <td>assertElementValueEquals()</td>
+  <td>Asserts that an element's value is equal to a given string.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertElementValueNotContains">
+  <td>assertElementValueNotContains()</td>
+  <td>Asserts that an element's value does not contain a given string.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertElementValueNotEquals">
+  <td>assertElementValueNotEquals()</td>
+  <td>Asserts that an element's value is not equal to a given string.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertEmpty">
+  <td>assertEmpty()</td>
+  <td>Asserts that a variable is empty.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertEqualXMLStructure">
+  <td>assertEqualXMLStructure()</td>
+  <td>Asserts that a hierarchy of DOMElements matches.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertEquals">
+  <td>assertEquals()</td>
+  <td>Asserts that two variables are equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertFalse">
+  <td>assertFalse()</td>
+  <td>Asserts that a condition is false.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertFileEquals">
+  <td>assertFileEquals()</td>
+  <td>Asserts that the contents of one file is equal to the contents of another</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertFileExists">
+  <td>assertFileExists()</td>
+  <td>Asserts that a file exists.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertFileNotEquals">
+  <td>assertFileNotEquals()</td>
+  <td>Asserts that the contents of one file is not equal to the contents of</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertFileNotExists">
+  <td>assertFileNotExists()</td>
+  <td>Asserts that a file does not exist.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertGreaterThan">
+  <td>assertGreaterThan()</td>
+  <td>Asserts that a value is greater than another value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertGreaterThanOrEqual">
+  <td>assertGreaterThanOrEqual()</td>
+  <td>Asserts that a value is greater than or equal to another value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertInstanceOf">
+  <td>assertInstanceOf()</td>
+  <td>Asserts that a variable is of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertInternalType">
+  <td>assertInternalType()</td>
+  <td>Asserts that a variable is of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertIsNotSelected">
+  <td>assertIsNotSelected()</td>
+  <td>Asserts that a specific value is not selected.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertIsSelected">
+  <td>assertIsSelected()</td>
+  <td>Asserts that a specific value is selected.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertJsonFileEqualsJsonFile">
+  <td>assertJsonFileEqualsJsonFile()</td>
+  <td>Asserts that two JSON files are equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertJsonFileNotEqualsJsonFile">
+  <td>assertJsonFileNotEqualsJsonFile()</td>
+  <td>Asserts that two JSON files are not equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertJsonStringEqualsJsonFile">
+  <td>assertJsonStringEqualsJsonFile()</td>
+  <td>Asserts that the generated JSON encoded object and the content of the given file are equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertJsonStringEqualsJsonString">
+  <td>assertJsonStringEqualsJsonString()</td>
+  <td>Asserts that two given JSON encoded objects or arrays are equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertJsonStringNotEqualsJsonFile">
+  <td>assertJsonStringNotEqualsJsonFile()</td>
+  <td>Asserts that the generated JSON encoded object and the content of the given file are not equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertJsonStringNotEqualsJsonString">
+  <td>assertJsonStringNotEqualsJsonString()</td>
+  <td>Asserts that two given JSON encoded objects or arrays are not equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertLessThan">
+  <td>assertLessThan()</td>
+  <td>Asserts that a value is smaller than another value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertLessThanOrEqual">
+  <td>assertLessThanOrEqual()</td>
+  <td>Asserts that a value is smaller than or equal to another value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotContains">
+  <td>assertNotContains()</td>
+  <td>Asserts that a haystack does not contain a needle.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotContainsOnly">
+  <td>assertNotContainsOnly()</td>
+  <td>Asserts that a haystack does not contain only values of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotCount">
+  <td>assertNotCount()</td>
+  <td>Asserts the number of elements of an array, Countable or Iterator.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotEmpty">
+  <td>assertNotEmpty()</td>
+  <td>Asserts that a variable is not empty.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotEquals">
+  <td>assertNotEquals()</td>
+  <td>Asserts that two variables are not equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotInstanceOf">
+  <td>assertNotInstanceOf()</td>
+  <td>Asserts that a variable is not of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotInternalType">
+  <td>assertNotInternalType()</td>
+  <td>Asserts that a variable is not of a given type.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotNull">
+  <td>assertNotNull()</td>
+  <td>Asserts that a variable is not NULL.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotRegExp">
+  <td>assertNotRegExp()</td>
+  <td>Asserts that a string does not match a given regular expression.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotSame">
+  <td>assertNotSame()</td>
+  <td>Asserts that two variables do not have the same type and value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotSameSize">
+  <td>assertNotSameSize()</td>
+  <td>Assert that the size of two arrays (or `Countable` or `Iterator` objects)</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNotSelected">
+  <td>assertNotSelected()</td>
+  <td>Asserts that a specific label is not selected.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertNotTag">
+  <td>assertNotTag()</td>
+  <td>This assertion is the exact opposite of assertTag().</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertNull">
+  <td>assertNull()</td>
+  <td>Asserts that a variable is NULL.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertObjectHasAttribute">
+  <td>assertObjectHasAttribute()</td>
+  <td>Asserts that an object has a specified attribute.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertObjectNotHasAttribute">
+  <td>assertObjectNotHasAttribute()</td>
+  <td>Asserts that an object does not have a specified attribute.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertRegExp">
+  <td>assertRegExp()</td>
+  <td>Asserts that a string matches a given regular expression.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertSame">
+  <td>assertSame()</td>
+  <td>Asserts that two variables have the same type and value.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertSameSize">
+  <td>assertSameSize()</td>
+  <td>Assert that the size of two arrays (or `Countable` or `Iterator` objects)</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertSelectCount">
+  <td>assertSelectCount()</td>
+  <td>Assert the presence, absence, or count of elements in a document matching</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertSelectEquals">
+  <td>assertSelectEquals()</td>
+  <td>assertSelectEquals("#binder .name", "Chuck", true,  $xml);  // any?</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertSelectHasOption">
+  <td>assertSelectHasOption()</td>
+  <td>Asserts that a select element has a specific option.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertSelectNotHasOption">
+  <td>assertSelectNotHasOption()</td>
+  <td>Asserts that a select element does not have a specific option.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertSelectRegExp">
+  <td>assertSelectRegExp()</td>
+  <td>assertSelectRegExp("#binder .name", "/Mike|Derek/", true, $xml); // any?</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertSelected">
+  <td>assertSelected()</td>
+  <td>Asserts that a specific label is selected.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="assertStringEndsNotWith">
+  <td>assertStringEndsNotWith()</td>
+  <td>Asserts that a string ends not with a given prefix.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringEndsWith">
+  <td>assertStringEndsWith()</td>
+  <td>Asserts that a string ends with a given prefix.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringEqualsFile">
+  <td>assertStringEqualsFile()</td>
+  <td>Asserts that the contents of a string is equal</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringMatchesFormat">
+  <td>assertStringMatchesFormat()</td>
+  <td>Asserts that a string matches a given format string.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringMatchesFormatFile">
+  <td>assertStringMatchesFormatFile()</td>
+  <td>Asserts that a string matches a given format file.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringNotEqualsFile">
+  <td>assertStringNotEqualsFile()</td>
+  <td>Asserts that the contents of a string is not equal</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringNotMatchesFormat">
+  <td>assertStringNotMatchesFormat()</td>
+  <td>Asserts that a string does not match a given format string.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringNotMatchesFormatFile">
+  <td>assertStringNotMatchesFormatFile()</td>
+  <td>Asserts that a string does not match a given format string.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringStartsNotWith">
+  <td>assertStringStartsNotWith()</td>
+  <td>Asserts that a string starts not with a given prefix.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertStringStartsWith">
+  <td>assertStringStartsWith()</td>
+  <td>Asserts that a string starts with a given prefix.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertTag">
+  <td>assertTag()</td>
+  <td>Evaluate an HTML or XML string and assert its structure and/or contents.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertThat">
+  <td>assertThat()</td>
+  <td>Evaluates a PHPUnit_Framework_Constraint matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertTrue">
+  <td>assertTrue()</td>
+  <td>Asserts that a condition is true.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertXmlFileEqualsXmlFile">
+  <td>assertXmlFileEqualsXmlFile()</td>
+  <td>Asserts that two XML files are equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertXmlFileNotEqualsXmlFile">
+  <td>assertXmlFileNotEqualsXmlFile()</td>
+  <td>Asserts that two XML files are not equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertXmlStringEqualsXmlFile">
+  <td>assertXmlStringEqualsXmlFile()</td>
+  <td>Asserts that two XML documents are equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertXmlStringEqualsXmlString">
+  <td>assertXmlStringEqualsXmlString()</td>
+  <td>Asserts that two XML documents are equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertXmlStringNotEqualsXmlFile">
+  <td>assertXmlStringNotEqualsXmlFile()</td>
+  <td>Asserts that two XML documents are not equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="assertXmlStringNotEqualsXmlString">
+  <td>assertXmlStringNotEqualsXmlString()</td>
+  <td>Asserts that two XML documents are not equal.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="at">
+  <td>at()</td>
+  <td>Returns a matcher that matches when the method it is evaluated for</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="atLeastOnce">
+  <td>atLeastOnce()</td>
+  <td>Returns a matcher that matches when the method it is evaluated for</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="attribute">
+  <td>attribute()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_Attribute matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="attributeEqualTo">
+  <td>attributeEqualTo()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsEqual matcher object</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="callback">
+  <td>callback()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_Callback matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="classHasAttribute">
+  <td>classHasAttribute()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_ClassHasAttribute matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="classHasStaticAttribute">
+  <td>classHasStaticAttribute()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_ClassHasStaticAttribute matcher</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="contains">
+  <td>contains()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_TraversableContains matcher</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="containsOnly">
+  <td>containsOnly()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_TraversableContainsOnly matcher</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="containsOnlyInstancesOf">
+  <td>containsOnlyInstancesOf()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_TraversableContainsOnly matcher</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="count">
+  <td>count()</td>
+  <td>Counts the number of test cases executed by run(TestResult result).</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="equalTo">
+  <td>equalTo()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsEqual matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="exactly">
+  <td>exactly()</td>
+  <td>Returns a matcher that matches when the method it is evaluated for</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="expectOutputRegex">
+  <td>expectOutputRegex()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="expectOutputString">
+  <td>expectOutputString()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="fail">
+  <td>fail()</td>
+  <td>Fails a test with the given message.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="fileExists">
+  <td>fileExists()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_FileExists matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="getActualOutput">
+  <td>getActualOutput()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getAnnotations">
+  <td>getAnnotations()</td>
+  <td>Returns the annotations for this test.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getCount">
+  <td>getCount()</td>
+  <td>Return the current assertion count.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="getExpectedException">
+  <td>getExpectedException()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr id="getFixtureData">
+  <td><a href="CWebTestCase.html#getFixtureData-detail">getFixtureData()</a></td>
+  <td>Returns the named fixture data</td>
+  <td>CWebTestCase</td>
+</tr>
+<tr id="getFixtureManager">
+  <td><a href="CWebTestCase.html#getFixtureManager-detail">getFixtureManager()</a></td>
+  <td>Returns the database fixture manager</td>
+  <td>CWebTestCase</td>
+</tr>
+<tr id="getFixtureRecord">
+  <td><a href="CWebTestCase.html#getFixtureRecord-detail">getFixtureRecord()</a></td>
+  <td>Returns the ActiveRecord instance corresponding to the specified alias in the named fixture.
+False is returned if there is no such fixture or the record cannot be found.</td>
+  <td>CWebTestCase</td>
+</tr>
+<tr class="inherited" id="getMock">
+  <td>getMock()</td>
+  <td>Returns a mock object for the specified class.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getMockBuilder">
+  <td>getMockBuilder()</td>
+  <td>Returns a builder object to create mock objects using a fluent interface.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getMockForAbstractClass">
+  <td>getMockForAbstractClass()</td>
+  <td>Returns a mock object for the specified abstract class with all abstract</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getName">
+  <td>getName()</td>
+  <td>Gets the name of a TestCase.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getNumAssertions">
+  <td>getNumAssertions()</td>
+  <td>Returns the number of assertions performed by this test.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getResult">
+  <td>getResult()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getSize">
+  <td>getSize()</td>
+  <td>Returns the size of the test.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getStatus">
+  <td>getStatus()</td>
+  <td>Returns the status of this test.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getStatusMessage">
+  <td>getStatusMessage()</td>
+  <td>Returns the status message of this test.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getTestResultObject">
+  <td>getTestResultObject()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="greaterThan">
+  <td>greaterThan()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_GreaterThan matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="greaterThanOrEqual">
+  <td>greaterThanOrEqual()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_Or matcher object that wraps</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="hasFailed">
+  <td>hasFailed()</td>
+  <td>Returns whether or not this test has failed.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="hasOutput">
+  <td>hasOutput()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="hasPerformedExpectationsOnOutput">
+  <td>hasPerformedExpectationsOnOutput()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="identicalTo">
+  <td>identicalTo()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsIdentical matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="isEmpty">
+  <td>isEmpty()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsEmpty matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="isFalse">
+  <td>isFalse()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsFalse matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="isInstanceOf">
+  <td>isInstanceOf()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsInstanceOf matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="isNull">
+  <td>isNull()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsNull matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="isTrue">
+  <td>isTrue()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsTrue matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="isType">
+  <td>isType()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_IsType matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="lessThan">
+  <td>lessThan()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_LessThan matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="lessThanOrEqual">
+  <td>lessThanOrEqual()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_Or matcher object that wraps</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="logicalAnd">
+  <td>logicalAnd()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_And matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="logicalNot">
+  <td>logicalNot()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_Not matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="logicalOr">
+  <td>logicalOr()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_Or matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="logicalXor">
+  <td>logicalXor()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_Xor matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="markTestIncomplete">
+  <td>markTestIncomplete()</td>
+  <td>Mark the test as incomplete.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="markTestSkipped">
+  <td>markTestSkipped()</td>
+  <td>Mark the test as skipped.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="matches">
+  <td>matches()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_StringMatches matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="matchesRegularExpression">
+  <td>matchesRegularExpression()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_PCREMatch matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="never">
+  <td>never()</td>
+  <td>Returns a matcher that matches when the method it is evaluated for</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="objectHasAttribute">
+  <td>objectHasAttribute()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_ObjectHasAttribute matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="onConsecutiveCalls">
+  <td>onConsecutiveCalls()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="once">
+  <td>once()</td>
+  <td>Returns a matcher that matches when the method it is evaluated for</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="readAttribute">
+  <td>readAttribute()</td>
+  <td>Returns the value of an attribute of a class or an object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="resetCount">
+  <td>resetCount()</td>
+  <td>Reset the assertion counter.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="returnArgument">
+  <td>returnArgument()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="returnCallback">
+  <td>returnCallback()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="returnSelf">
+  <td>returnSelf()</td>
+  <td>Returns the current object.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="returnValue">
+  <td>returnValue()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="returnValueMap">
+  <td>returnValueMap()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="run">
+  <td>run()</td>
+  <td>Runs the test case and collects the results in a TestResult object.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="runBare">
+  <td>runBare()</td>
+  <td>Runs the bare test sequence.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="runDefaultAssertions">
+  <td>runDefaultAssertions()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="runSelenese">
+  <td>runSelenese()</td>
+  <td>Runs a test from a Selenese (HTML) specification.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="setBackupGlobals">
+  <td>setBackupGlobals()</td>
+  <td>Calling this method in setUp() has no effect!</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setBackupStaticAttributes">
+  <td>setBackupStaticAttributes()</td>
+  <td>Calling this method in setUp() has no effect!</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setDependencies">
+  <td>setDependencies()</td>
+  <td>Sets the dependencies of a TestCase.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setDependencyInput">
+  <td>setDependencyInput()</td>
+  <td>Sets</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setExpectedException">
+  <td>setExpectedException()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setInIsolation">
+  <td>setInIsolation()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setName">
+  <td>setName()</td>
+  <td>Sets the name of a TestCase.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setOutputCallback">
+  <td>setOutputCallback()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setPreserveGlobalState">
+  <td>setPreserveGlobalState()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setResult">
+  <td>setResult()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setRunTestInSeparateProcess">
+  <td>setRunTestInSeparateProcess()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setTestResultObject">
+  <td>setTestResultObject()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setUpBeforeClass">
+  <td>setUpBeforeClass()</td>
+  <td>This method is called before the first test of this test class is run.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setUseErrorHandler">
+  <td>setUseErrorHandler()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setUseOutputBuffering">
+  <td>setUseOutputBuffering()</td>
+  <td>Sets </td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setupSpecificBrowser">
+  <td>setupSpecificBrowser()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="shareSession">
+  <td>shareSession()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="skipWithNoServerRunning">
+  <td>skipWithNoServerRunning()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="stringContains">
+  <td>stringContains()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_StringContains matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="stringEndsWith">
+  <td>stringEndsWith()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_StringEndsWith matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="stringStartsWith">
+  <td>stringStartsWith()</td>
+  <td>Returns a PHPUnit_Framework_Constraint_StringStartsWith matcher object.</td>
+  <td>PHPUnit_Framework_Assert</td>
+</tr>
+<tr class="inherited" id="suite">
+  <td>suite()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="tearDownAfterClass">
+  <td>tearDownAfterClass()</td>
+  <td>This method is called after the last test of this test class is run.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="throwException">
+  <td>throwException()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="toString">
+  <td>toString()</td>
+  <td>Returns a string representation of the test case.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+</table>
+</div>
+<div class="summary docMethod">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summaryTable">
+<colgroup>
+	<col class="col-method" />
+	<col class="col-description" />
+	<col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+<tr class="inherited" id="assertPostConditions">
+  <td>assertPostConditions()</td>
+  <td>Performs assertions shared by all tests of a test case.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="assertPreConditions">
+  <td>assertPreConditions()</td>
+  <td>Performs assertions shared by all tests of a test case.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="checkRequirements">
+  <td>checkRequirements()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="createResult">
+  <td>createResult()</td>
+  <td>Creates a default TestResult object.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="dataToString">
+  <td>dataToString()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="defaultAssertions">
+  <td>defaultAssertions()</td>
+  <td>Template Method that is called after Selenium actions.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="getCodeCoverage">
+  <td>getCodeCoverage()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="getDataSetAsString">
+  <td>getDataSetAsString()</td>
+  <td>Gets the data set description of a TestCase.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getDriver">
+  <td>getDriver()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="getMockClass">
+  <td>getMockClass()</td>
+  <td>Mocks the specified class and returns the name of the mocked class.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getMockFromWsdl">
+  <td>getMockFromWsdl()</td>
+  <td>Returns a mock object based on the given WSDL file.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getObjectForTrait">
+  <td>getObjectForTrait()</td>
+  <td>Returns an object for the specified trait.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="getScreenshotPath">
+  <td>getScreenshotPath()</td>
+  <td>Returns correct path to screenshot save path.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="handleDependencies">
+  <td>handleDependencies()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="iniSet">
+  <td>iniSet()</td>
+  <td>This method is a wrapper for the ini_set() function that automatically</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="onNotSuccessfulTest">
+  <td>onNotSuccessfulTest()</td>
+  <td>This method is called when a test method did not execute successfully.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="prepareTemplate">
+  <td>prepareTemplate()</td>
+  <td>Performs custom preparations on the process isolation template.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="prepareTestSession">
+  <td>prepareTestSession()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="runTest">
+  <td>runTest()</td>
+  <td></td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="setExpectedExceptionFromAnnotation">
+  <td>setExpectedExceptionFromAnnotation()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setLocale">
+  <td>setLocale()</td>
+  <td>This method is a wrapper for the setlocale() function that automatically</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setRequirementsFromAnnotation">
+  <td>setRequirementsFromAnnotation()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr id="setUp">
+  <td><a href="CWebTestCase.html#setUp-detail">setUp()</a></td>
+  <td>Sets up the fixture before executing a test method.</td>
+  <td>CWebTestCase</td>
+</tr>
+<tr class="inherited" id="setUseErrorHandlerFromAnnotation">
+  <td>setUseErrorHandlerFromAnnotation()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="setUseOutputBufferingFromAnnotation">
+  <td>setUseOutputBufferingFromAnnotation()</td>
+  <td></td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="takeScreenshot">
+  <td>takeScreenshot()</td>
+  <td>Take a screenshot and return information about it.</td>
+  <td>PHPUnit_Extensions_SeleniumTestCase</td>
+</tr>
+<tr class="inherited" id="tearDown">
+  <td>tearDown()</td>
+  <td>Tears down the fixture, for example, close a network connection.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+<tr class="inherited" id="verifyMockObjects">
+  <td>verifyMockObjects()</td>
+  <td>Verifies the mock object expectations.</td>
+  <td>PHPUnit_Framework_TestCase</td>
+</tr>
+</table>
+</div>
+<a name="events"></a>
+
+<h2>Property Details</h2>
+<div class="detailHeader" id="fixtures-detail">
+fixtures<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+protected array <b>$fixtures</b>;</div>
+
+<p>a list of fixtures that should be loaded before each test method executes.
+The array keys are fixture names, and the array values are either AR class names
+or table names. If table names, they must begin with a colon character (e.g. 'Post'
+means an AR class, while ':Post' means a table name).
+Defaults to false, meaning fixtures will not be used at all.</p>
+
+
+<h2>Method Details</h2>
+
+<div class="detailHeader" id="__call-detail">
+__call()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public mixed <b>__call</b>(string $name, string $params)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$name</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">method name</td>
+</tr>
+<tr>
+  <td class="paramNameCol">$params</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">method parameters</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">mixed</td>
+  <td class="paramDescCol">the property value</td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/1.1.13/framework/test/CWebTestCase.php#L58">framework/test/CWebTestCase.php#58</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">__call</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$params</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">fixtures</span><span style="color: #007700">)&nbsp;&amp;&amp;&nbsp;isset(</span><span style="color: #0000BB">$params</span><span style="color: #007700">[</span><span style="color: #0000BB">0</span><span style="color: #007700">])&nbsp;&amp;&amp;&nbsp;(</span><span style="color: #0000BB">$record</span><span style="color: #007700">=</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getFixtureManager</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getRecord</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$params</span><span style="color: #007700">[</span><span style="color: #0000BB">0</span><span style="color: #007700">]))!==</span><span style="color: #0000BB">false</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$record</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">__call</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$params</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p>PHP magic method.
+This method is overridden so that named fixture ActiveRecord instances can be accessed in terms of a method call.</p>
+
+
+<div class="detailHeader" id="__get-detail">
+__get()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public mixed <b>__get</b>(string $name)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$name</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">the property name</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">mixed</td>
+  <td class="paramDescCol">the property value</td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/1.1.13/framework/test/CWebTestCase.php#L43">framework/test/CWebTestCase.php#43</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">__get</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">fixtures</span><span style="color: #007700">)&nbsp;&amp;&amp;&nbsp;(</span><span style="color: #0000BB">$rows</span><span style="color: #007700">=</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getFixtureManager</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getRows</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">))!==</span><span style="color: #0000BB">false</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$rows</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #0000BB">Exception</span><span style="color: #007700">(</span><span style="color: #DD0000">"Unknown&nbsp;property&nbsp;'</span><span style="color: #0000BB">$name</span><span style="color: #DD0000">'&nbsp;for&nbsp;class&nbsp;'"</span><span style="color: #007700">.</span><span style="color: #0000BB">get_class</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">).</span><span style="color: #DD0000">"'."</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p>PHP magic method.
+This method is overridden so that named fixture data can be accessed like a normal property.</p>
+
+
+<div class="detailHeader" id="getFixtureData-detail">
+getFixtureData()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public array <b>getFixtureData</b>(string $name)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$name</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">the fixture name (the key value in <a href="CWebTestCase.html#fixtures">fixtures</a>).</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">array</td>
+  <td class="paramDescCol">the named fixture data</td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/1.1.13/framework/test/CWebTestCase.php#L78">framework/test/CWebTestCase.php#78</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getFixtureData</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getFixtureManager</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getRows</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="getFixtureManager-detail">
+getFixtureManager()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public <a href="CDbFixtureManager.html">CDbFixtureManager</a> <b>getFixtureManager</b>()</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><a href="CDbFixtureManager.html">CDbFixtureManager</a></td>
+  <td class="paramDescCol">the database fixture manager</td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/1.1.13/framework/test/CWebTestCase.php#L69">framework/test/CWebTestCase.php#69</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getFixtureManager</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getComponent</span><span style="color: #007700">(</span><span style="color: #DD0000">'fixture'</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="getFixtureRecord-detail">
+getFixtureRecord()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public <a href="CActiveRecord.html">CActiveRecord</a> <b>getFixtureRecord</b>(string $name, string $alias)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$name</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">the fixture name (the key value in <a href="CWebTestCase.html#fixtures">fixtures</a>).</td>
+</tr>
+<tr>
+  <td class="paramNameCol">$alias</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">the alias of the fixture data row</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><a href="CActiveRecord.html">CActiveRecord</a></td>
+  <td class="paramDescCol">the ActiveRecord instance corresponding to the specified alias in the named fixture.
+False is returned if there is no such fixture or the record cannot be found.</td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/1.1.13/framework/test/CWebTestCase.php#L89">framework/test/CWebTestCase.php#89</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getFixtureRecord</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$alias</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getFixtureManager</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getRecord</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$alias</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="setUp-detail">
+setUp()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected void <b>setUp</b>()</div>
+</td></tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/1.1.13/framework/test/CWebTestCase.php#L99">framework/test/CWebTestCase.php#99</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">setUp</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">setUp</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">fixtures</span><span style="color: #007700">))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getFixtureManager</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">load</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">fixtures</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Sets up the fixture before executing a test method.
+If you override this method, make sure the parent implementation is invoked.
+Otherwise, the database fixtures will not be managed properly.</p>
+
+
+</div><!-- end of content -->
+
+<div id="apiFooter">
+Copyright &copy; 2008-2011 by <a href="http://www.yiisoft.com">Yii Software LLC</a><br/>
+All Rights Reserved.<br/>
+</div><!-- end of footer -->
+
+<script type="text/javascript">
+/*<![CDATA[*/
+$("a.toggle").toggle(function(){
+	$(this).text($(this).text().replace(/Hide/,'Show'));
+	$(this).parents(".summary").find(".inherited").hide();
+},function(){
+	$(this).text($(this).text().replace(/Show/,'Hide'));
+	$(this).parents(".summary").find(".inherited").show();
+});
+$(".sourceCode a.show").toggle(function(){
+	$(this).text($(this).text().replace(/show/,'hide'));
+	$(this).parents(".sourceCode").find("div.code").show();
+},function(){
+	$(this).text($(this).text().replace(/hide/,'show'));
+	$(this).parents(".sourceCode").find("div.code").hide();
+});
+$("a.sourceLink").click(function(){
+	$(this).attr('target','_blank');
+});
+/*]]>*/
+</script>
+
+</div><!-- end of page -->
+</body>
+</html>
